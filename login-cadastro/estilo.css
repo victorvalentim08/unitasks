@@ -251,3 +251,18 @@ input:focus {
     color: #fff;
     border-color: #0A66C2;
 }
+
+#mostraSenha {
+    background: none;
+    border: none;
+    color: transparent;
+    font-size: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  #mostraSenha {
+    display: none;
+  }
