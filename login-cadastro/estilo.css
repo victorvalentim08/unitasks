@@ -59,6 +59,17 @@ h1 {
     
 }
 
+.esqueceuSenha {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    font-style: italic;
+    cursor: pointer;
+  }
+  .esqueceuSenha:hover {
+    text-decoration: underline;
+  }
+
 .form-container, .cadastro {
     flex: 1;
     display: flex;
@@ -137,6 +148,39 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.button-link {
+    background-color: #c82b41;  
+    color: #ffffff; 
+    font-size: 12px;  
+    padding: 10px 20px; 
+    border: 1px solid transparent; 
+    border-radius: 8px;  
+    font-weight: 600;  
+    letter-spacing: 0.5px;  
+    text-transform: uppercase;  
+    cursor: pointer;  
+    transition: all 0.3s ease;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    cursor: default;
+    user-select: none;
+}
+.button-link:hover {
+    background-color: #8b1c2c;  
+    transform: scale(1.05); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);  
+    border-color: #8b1c2c;
+}
+.button-link:focus {
+    outline: none;  
+    box-shadow: 0 0 10px rgba(255, 0, 34, 0.5); 
+    border-color: #c82b41; 
+}
+
+.button-link:active {
+    transform: scale(0.98);  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 #register {
     background-color: #ffffff;
     color: #c82b41;
@@ -204,3 +248,4 @@ input:focus {
     color: #fff;
     border-color: #0A66C2;
 }
+
