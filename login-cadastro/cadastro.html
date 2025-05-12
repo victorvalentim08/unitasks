@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="/cadastro/cadastro.css">
+    <link rel="stylesheet" href="/cadastro.css">
 </head>
 <body>
-    <div>
-        <form class="fomulario" action="" method="post">
+    <div class="container">
+        <form class="formulario" action="" method="post">
+            <img src="/assets/Logotipo sem fundo(sem nome).png" alt="logo" class="logo">
             <h2>Olá, nova raposa!</h2>
-            <input type="text" placeholder="Digite seu nome completo">
-            <input type="date" placeholder="Digite sua data de nascimento">
-            <input type="text" placeholder="Digite sua matrícula">
+            <input type="text" placeholder="Digite seu nome completo" name="nome">
+            <input type="date" placeholder="Digite sua data de nascimento" name="nascimento">
+            <input type="text" placeholder="Digite sua matrícula" name="matricula">
             
-            <select name="opcoes" id="opcoes" title="Selecione">
+            <select name="opcoes" id="curso" title="Selecione">
                 <option value="">Curso</option>
                 <option value="ads">Análise e Desenvolvimento de Sistemas</option>
                 <option value="administração">Administração</option>
@@ -35,9 +36,14 @@
                 <option value="via">Via Corpvs</option>
             </select>
             
-            <input type="text" placeholder="Digite seu semestre">
             <input type="email" placeholder="E-mail">
             <input type="password" placeholder="Digite uma senha">
+            
+            <div class="termos-uso">
+                <input type="checkbox" id="termos" required>
+                <label for="termos">Li e aceito os <a href="termos.html" target="_blank">termos de uso</a>
+                </label>
+            </div>
             <button type="submit">Registrar</button>
         </form>
     </div>
