@@ -21,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Escurece: 0.4 é a opacidade */
+    background-color: rgba(0, 0, 0, 0.8); /* Escurece: 0.4 é a opacidade */
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px); /* Aplica o blur/desfoque */
     z-index: 0;
@@ -103,5 +103,4 @@
     margin: 0 auto 0 auto;
     max-width: 200px;
   }
-  
   
