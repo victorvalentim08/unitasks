@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Meu Curso</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="bg-overlay"></div>
+    <aside class="sidebar">
+      <div class="menu-icon" id="menu-toggle">
+        <span></span> <span></span> <span></span>
+      </div>
+      <nav>
+        <a href="menu.html">Início</a>
+        <a href="#">Fórum</a>
+        <a href="#">Sobre</a>
+        <a href="menu.html">Painel do Aluno</a>
+      </nav>
+    </aside>
+    <div class="container">
+      <header>
+        <h1>Meu Curso</h1>
+        <p>Acompanhe seu progresso e informações do curso.</p>
+      </header>
+      <div class="user-info">
+        <img
+          src="assets/images/aluno1.jpeg"
+          alt="Foto do Aluno"
+          id="foto-aluno"
+          style="cursor: pointer"
+        />
+        <div class="user-details">
+          <h2>João Silva</h2>
+          <p>Matrícula: 2023001 | Curso: Ciência da Computação</p>
+        </div>
+      </div>
+      <main>
+        <section class="painel-aluno" id="painel-aluno">
+          <img
+            src="assets/icons/Logotipo sem fundo(sem nome).png"
+            alt="Logo Raposa"
+            class="logo-painel"
+          />
+          <h2>Disciplinas do Semestre</h2>
+          <ul style="text-align:left; max-width:400px; margin: 0 auto 24px auto;">
+            <li>Algoritmos e Estruturas de Dados</li>
+            <li>Matemática Discreta</li>
+            <li>Banco de Dados</li>
+            <li>Engenharia de Software</li>
+            <li>Redes de Computadores</li>
+            <li>Programação Web</li>
+          </ul>
+          <h3 style="margin-top:32px; color:#e87c1c;">Progresso</h3>
+          <div style="background:#eee; border-radius:20px; width:80%; margin:0 auto; height:24px;">
+            <div style="background:#e87c1c; width:60%; height:24px; border-radius:20px; text-align:center; color:#fff; font-weight:600; line-height:24px;">60% concluído</div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle"),
+        sidebar = document.querySelector(".sidebar");
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html> 
