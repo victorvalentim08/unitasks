@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded',function(){
         else if (email === usuarioValido.email && password === usuarioValido.senha) {
             erroMsg.textContent = "Login bem-sucedido!"
             erroMsg.style.color = "green"
+            window.location.href = "Home/index2.html"
         }
         else {
             erroMsg.textContent = "E-mail ou senha incorretos. "
