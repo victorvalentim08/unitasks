@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Portal da Raposa - Faculdade</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="bg-overlay"></div>
@@ -13,7 +13,10 @@
         <span></span> <span></span> <span></span>
       </div>
       <nav>
-        <a href="#">Início</a> <a href="#">Fórum</a> <a href="#">Sobre</a>
+        <a href="#">Início</a>
+        <a href="#">Fórum</a>
+        <a href="#">Sobre</a>
+        <a href="menu.html">Painel do Aluno</a>
       </nav>
     </aside>
     <div class="container">
@@ -59,18 +62,8 @@
           "
         />
       </div>
-      <script>
-        const foto = document.getElementById("foto-aluno"),
-          modal = document.getElementById("modal-foto");
-        (foto.onclick = () => {
-          modal.style.display = "flex";
-        }),
-          (modal.onclick = () => {
-            modal.style.display = "none";
-          });
-      </script>
       <main>
-        <div class="painel-aluno">
+        <div class="painel-aluno" id="painel-aluno">
           <img
             src="assets/icons/Logotipo sem fundo(sem nome).png"
             alt="Logo Raposa"
