@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portal da Raposa - Faculdade</title>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <div class="bg-overlay"></div>
+    <aside class="sidebar">
+      <div class="menu-icon" id="menu-toggle">
+        <span></span> <span></span> <span></span>
+      </div>
+      <nav>
+        <a href="#">Início</a> <a href="#">Fórum</a> <a href="#">Sobre</a>
+      </nav>
+    </aside>
+    <div class="container">
+      <header>
+        <h1>Portal da Raposa</h1>
+        <p>Tenha controle total do curso.</p>
+      </header>
+      <div class="user-info">
+        <img
+          src="assets/images/aluno1.jpeg"
+          alt="Foto do Aluno"
+          id="foto-aluno"
+          style="cursor: pointer"
+        />
+        <div class="user-details">
+          <h2>João Silva</h2>
+          <p>Matrícula: 2023001 | Curso: Ciência da Computação</p>
+        </div>
+      </div>
+      <div
+        id="modal-foto"
+        style="
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.8);
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+        "
+      >
+        <img
+          src="assets/images/aluno1.jpeg"
+          alt="Foto do Aluno"
+          style="
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 4px 32px #000a;
+          "
+        />
+      </div>
+      <script>
+        const foto = document.getElementById("foto-aluno"),
+          modal = document.getElementById("modal-foto");
+        (foto.onclick = () => {
+          modal.style.display = "flex";
+        }),
+          (modal.onclick = () => {
+            modal.style.display = "none";
+          });
+      </script>
+      <main>
+        <div class="painel-aluno">
+          <img
+            src="assets/icons/Logotipo sem fundo(sem nome).png"
+            alt="Logo Raposa"
+            class="logo-painel"
+          />
+          <h2>Painel do Aluno</h2>
+          <p class="subtitulo">
+            Seja bem-vindo ao seu painel! Aqui você terá as opções de :
+          </p>
+          <div class="botoes-painel">
+            <a href="#" class="botao-painel"
+              ><img
+                src="assets/images/fotoh.jpg"
+                alt="Eventos"
+                class="img-botao-painel"
+              />
+              EVENTOS </a
+            ><a href="biblioteca.html" class="botao-painel"
+              ><img
+                src="assets/images/foto4.jpg"
+                alt="Biblioteca"
+                class="img-botao-painel"
+              />
+              BIBLIOTECA </a
+            ><a href="financeiro.html" class="botao-painel"
+              ><img
+                src="assets/images/foto3.jpg"
+                alt="Financeiro"
+                class="img-botao-painel"
+              />
+              FINANCEIRO </a
+            ><a href="meucurso.html" class="botao-painel"
+              ><img
+                src="assets/images/foto.jpg"
+                alt="Meu Curso"
+                class="img-botao-painel"
+              />
+              MEU CURSO</a
+            >
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle"),
+        sidebar = document.querySelector(".sidebar");
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
