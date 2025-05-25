@@ -13,7 +13,7 @@ document.querySelector(".formulario").addEventListener("submit", function(event)
 
     if(!nome || !matricula || !curso || !polo || !email || !senha){
         alert("Por favor, preencha todos os campos");
-        return
+        return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -22,7 +22,7 @@ document.querySelector(".formulario").addEventListener("submit", function(event)
         return;
     }
 
-     if (!termos) {
+    if (!termos) {
         alert("Você precisa aceitar os termos de uso.");
         return;
     }
