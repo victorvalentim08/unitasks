@@ -209,13 +209,55 @@ input:focus {
 
 #mostraSenha {
   position: absolute;
-  top: 50%;
-  right: 10px;
+  top: 55%;
+  right: 20px;
   transform: translateY(-50%);
-  background: none;
+  background: transparent;
   border: none;
-  color: transparent;
-  font-size: 0;
+  color: #c82b41;
+  font-size: 16px;
   cursor: pointer;
-  display: none;
+  display: inline;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .form-container,
+  .cadastro {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .container button,
+  .button-link {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  .social-icons {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons .icon {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
 }
