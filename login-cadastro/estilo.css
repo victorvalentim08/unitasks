@@ -209,15 +209,26 @@ input:focus {
 
 #mostraSenha {
   position: absolute;
-  top: 55%;
+  top: 50%;              /* Ajustei para centralizar verticalmente */
   right: 20px;
   transform: translateY(-50%);
   background: transparent;
   border: none;
+  outline: none;         /* Remove contorno no foco */
+  box-shadow: none;      /* Remove sombra no foco */
   color: #c82b41;
-  font-size: 16px;
+  font-size: 18px;       /* Aumenta um pouco para o ícone ficar visível */
   cursor: pointer;
-  display: inline;
+  padding: 0;            /* Remove espaçamento extra */
+  width: 24px;           /* Tamanho fixo para caber só o ícone */
+  height: 24px;
+  display: flex;         /* Facilita centralizar o ícone */
+  align-items: center;
+  justify-content: center;
+}
+#mostraSenha:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 
