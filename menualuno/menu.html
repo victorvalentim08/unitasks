@@ -10,14 +10,14 @@
   <body>
     <div class="bg-overlay"></div>
     <aside class="sidebar">
-      <div class="menu-icon" id="menu-toggle">
+      <div class="menu-icon">
         <span></span> <span></span> <span></span>
       </div>
       <nav>
-        <a href="../Home/index2.html"><i class="fas fa-home"></i>Início</a>
-        <a href="#"><i class="fas fa-comments"></i>Fórum</a>
-        <a href="#"><i class="fas fa-info-circle"></i>Sobre</a>
-        <a href="menu.html"><i class="fas fa-user-graduate"></i>Painel do Aluno</a>
+        <a href="../Home/index2.html" class="menu-link"><i class="fas fa-home"></i><span>Início</span></a>
+        <a href="#" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
+        <a href="#" class="menu-link"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
+        <a href="menu.html" class="menu-link active"><i class="fas fa-user-graduate"></i><span>Painel do Aluno</span></a>
       </nav>
     </aside>
     <div class="container">
@@ -108,25 +108,5 @@
         </div>
       </main>
     </div>
-    <script>
-      const menuToggle = document.getElementById("menu-toggle"),
-        sidebar = document.querySelector(".sidebar"),
-        nav = document.querySelector(".sidebar nav");
-
-      // Inicialmente esconde as opções do menu
-      nav.style.display = "none";
-
-      menuToggle.addEventListener("click", () => {
-        // Toggle da classe open na sidebar
-        sidebar.classList.toggle("open");
-        
-        // Toggle da visibilidade das opções do menu
-        if (nav.style.display === "none") {
-          nav.style.display = "flex";
-        } else {
-          nav.style.display = "none";
-        }
-      });
-    </script>
   </body>
 </html>
