@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Portal da Raposa - Faculdade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     <div class="bg-overlay"></div>
@@ -13,10 +14,10 @@
         <span></span> <span></span> <span></span>
       </div>
       <nav>
-        <a href="#">Início</a>
-        <a href="#">Fórum</a>
-        <a href="#">Sobre</a>
-        <a href="menu.html">Painel do Aluno</a>
+        <a href="../Home/index2.html"><i class="fas fa-home"></i>Início</a>
+        <a href="#"><i class="fas fa-comments"></i>Fórum</a>
+        <a href="#"><i class="fas fa-info-circle"></i>Sobre</a>
+        <a href="menu.html"><i class="fas fa-user-graduate"></i>Painel do Aluno</a>
       </nav>
     </aside>
     <div class="container">
@@ -109,9 +110,22 @@
     </div>
     <script>
       const menuToggle = document.getElementById("menu-toggle"),
-        sidebar = document.querySelector(".sidebar");
+        sidebar = document.querySelector(".sidebar"),
+        nav = document.querySelector(".sidebar nav");
+
+      // Inicialmente esconde as opções do menu
+      nav.style.display = "none";
+
       menuToggle.addEventListener("click", () => {
+        // Toggle da classe open na sidebar
         sidebar.classList.toggle("open");
+        
+        // Toggle da visibilidade das opções do menu
+        if (nav.style.display === "none") {
+          nav.style.display = "flex";
+        } else {
+          nav.style.display = "none";
+        }
       });
     </script>
   </body>
