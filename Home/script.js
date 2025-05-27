@@ -1,3 +1,14 @@
+//Animação de Menu
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const navUl = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navUl.classList.toggle('show');
+  });
+});
+
+
 //Chuva
 const chuva = document.getElementById('chuva');
 chuva.innerHTML = '';
