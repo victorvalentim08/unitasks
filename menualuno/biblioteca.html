@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Biblioteca</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     <div class="bg-overlay"></div>
     <aside class="sidebar">
-      <div class="menu-icon" id="menu-toggle">
+      <div class="menu-icon">
         <span></span> <span></span> <span></span>
       </div>
       <nav>
-        <a href="menu.html">Início</a> <a href="#">Fórum</a>
-        <a href="#">Sobre</a> <a href="index.html">Painel do Aluno</a>
+        <a href="../Home/index2.html" class="menu-link"><i class="fas fa-home"></i><span>Início</span></a>
+        <a href="#" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
+        <a href="#" class="menu-link"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
+        <a href="menu.html" class="menu-link"><i class="fas fa-user-graduate"></i><span>Painel do Aluno</span></a>
+        <a href="biblioteca.html" class="menu-link active"><i class="fas fa-book"></i><span>Biblioteca</span></a>
       </nav>
     </aside>
     <div class="biblioteca-container">
@@ -61,11 +65,7 @@
       </div>
     </div>
     <script>
-      const menuToggle = document.getElementById("menu-toggle"),
-        sidebar = document.querySelector(".sidebar");
-      menuToggle.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-      });
+      // Nenhum JS necessário para toggle, pois o hover já é feito via CSS
     </script>
   </body>
 </html>
