@@ -227,26 +227,42 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 180px;
+  width: 220px;
   height: 100vh;
-  background: rgba(30, 10, 20, 0.85);
+  background: rgba(30, 10, 20, 0.95);
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 32px 0 0 0;
   box-shadow: 2px 0 16px #0004;
+  transition: all 0.3s ease;
+}
+.sidebar nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.sidebar nav.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 .sidebar .menu-icon {
   width: 48px;
   height: 48px;
   margin-left: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 2;
 }
 .sidebar .menu-icon span {
   display: block;
@@ -255,44 +271,46 @@ p {
   background: #d13b5b;
   border-radius: 4px;
   margin: 5px 0;
+  transition: all 0.3s ease;
 }
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-left: 24px;
-  margin-top: 8px;
-  transition:
-    max-height 0.3s,
-    opacity 0.3s;
+.sidebar.open .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+.sidebar.open .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+.sidebar.open .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 .sidebar nav a {
   color: #d13b5b;
-  font-size: 1.5em;
-  font-weight: 700;
   text-decoration: none;
-  margin-bottom: 4px;
-  transition: color 0.2s;
-  font-family: inherit;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .sidebar nav a:hover {
+  background: rgba(209, 59, 91, 0.1);
+  transform: translateX(8px);
   color: #e87c1c;
 }
 @media (max-width: 700px) {
   .sidebar {
-    width: 100vw;
-    height: 70px;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 0 0 0;
+    transform: translateX(-100%);
+    width: 260px;
+  }
+  .sidebar.open {
+    transform: translateX(0);
   }
   .sidebar nav {
-    flex-direction: row;
-    gap: 32px;
-    margin-left: 24px;
+    padding: 0 20px;
   }
   .sidebar .menu-icon {
-    margin: 0 16px 0 16px;
+    margin-left: 20px;
   }
 }
 @media (max-width: 700px) {
