@@ -19,7 +19,7 @@ body {
 
 .background-overlay {
   position: absolute;
-  inset: 0; 
+  inset: 0;
   background: url('../Banco de imagens/Login/background.jpeg') center/cover no-repeat;
   filter: brightness(0.1);
   z-index: -1;
@@ -53,7 +53,8 @@ h1 {
   margin: 20px 0;
 }
 
-.form-container, .cadastro {
+.form-container,
+.cadastro {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -86,7 +87,8 @@ h1 {
   margin: 20px 0;
 }
 
-.container a, .esqueceuSenha {
+.container a,
+.esqueceuSenha {
   font-size: 13px;
   font-style: italic;
   cursor: pointer;
@@ -97,11 +99,13 @@ h1 {
   margin: 2px 0 10px;
 }
 
-.esqueceuSenha:hover, .container a:hover {
+.esqueceuSenha:hover,
+.container a:hover {
   text-decoration: underline;
 }
 
-.container button, .button-link {
+.container button,
+.button-link {
   background-color: #c82b41;
   color: #fff;
   font-size: 12px;
@@ -113,26 +117,29 @@ h1 {
   text-transform: uppercase;
   cursor: default;
   user-select: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
-.container button:hover, .button-link:hover {
+.container button:hover,
+.button-link:hover {
   background-color: #8b1c2c;
   border-color: #8b1c2c;
   transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.container button:focus, .button-link:focus {
+.container button:focus,
+.button-link:focus {
   outline: none;
   border-color: #c82b41;
-  box-shadow: 0 0 10px rgba(255,0,34,0.5);
+  box-shadow: 0 0 10px rgba(255, 0, 34, 0.5);
 }
 
-.container button:active, .button-link:active {
+.container button:active,
+.button-link:active {
   transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .button-link {
@@ -158,7 +165,7 @@ input {
 input:focus {
   border-color: #8b1c2c;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(200,43,65,0.5);
+  box-shadow: 0 0 5px rgba(200, 43, 65, 0.5);
 }
 
 .social-icons {
@@ -168,6 +175,7 @@ input:focus {
   margin: 15px 0;
   user-select: none;
   cursor: default;
+  flex-wrap: wrap;
 }
 
 .social-icons .icon {
@@ -209,29 +217,30 @@ input:focus {
 
 #mostraSenha {
   position: absolute;
-  top: 50%;              /* Ajustei para centralizar verticalmente */
+  top: 50%;
   right: 20px;
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  outline: none;         /* Remove contorno no foco */
-  box-shadow: none;      /* Remove sombra no foco */
+  outline: none;
+  box-shadow: none;
   color: #c82b41;
-  font-size: 18px;       /* Aumenta um pouco para o ícone ficar visível */
+  font-size: 18px;
   cursor: pointer;
-  padding: 0;            /* Remove espaçamento extra */
-  width: 24px;           /* Tamanho fixo para caber só o ícone */
+  padding: 0;
+  width: 24px;
   height: 24px;
-  display: flex;         /* Facilita centralizar o ícone */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
+
 #mostraSenha:focus {
   outline: none;
   box-shadow: none;
 }
 
-
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .container {
     width: 90%;
@@ -270,5 +279,33 @@ input:focus {
     width: 35px;
     height: 35px;
     font-size: 16px;
+  }
+}
+
+/* Responsivo para telas muito pequenas (celulares antigos) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .container button,
+  .button-link {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .social-icons .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 }
