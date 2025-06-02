@@ -5,25 +5,62 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Financeiro</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
+    <div class="bg-overlay"></div>
+    <aside class="sidebar">
+      <div class="menu-icon">
+        <span></span> <span></span> <span></span>
+      </div>
+      <nav>
+        <a href="../index.html" class="menu-link"><i class="fas fa-home"></i><span>Início</span></a>
+        <a href="forum.html" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
+        <a href="#" class="menu-link"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
+        <a href="menu.html" class="menu-link active"><i class="fas fa-user-graduate"></i><span>Painel do Aluno</span></a>
+        <a href="eventos.html" class="menu-link"><i class="fas fa-calendar-alt"></i><span>Eventos</span></a>
+        <a href="biblioteca.html" class="menu-link"><i class="fas fa-book"></i><span>Biblioteca</span></a>
+      </nav>
+    </aside>
     <div class="container">
       <header>
-        <img
-          src="assets/icons/Logotipo sem fundo(sem nome).png"
-          alt="Logotipo da Raposa"
-        />
         <h1>Financeiro</h1>
         <p>Consulte suas mensalidades, boletos e histórico de pagamentos.</p>
       </header>
-      <a href="../index.html" class="voltar">Voltar ao Portal da Raposa</a>
+      <div class="user-info">
+        <img src="assets/images/aluno1.jpeg" alt="Foto do Aluno" id="foto-aluno" />
+        <div class="user-details">
+          <h2>João Silva</h2>
+          <p>Matrícula: 2023001 | Curso: Ciência da Computação</p>
+        </div>
+      </div>
+      <main>
+        <section class="painel-aluno" id="painel-aluno">
+          <img src="assets/icons/Logotipo sem fundo(sem nome).png" alt="Logo Raposa" class="logo-painel" />
+          <h2>Resumo Financeiro</h2>
+          <div class="financeiro-info">
+            <div class="financeiro-card">
+              <h3>Mensalidade Atual</h3>
+              <p><strong>R$ 850,00</strong> <span class="financeiro-vencimento">(Vencimento: 10/06/2025)</span></p>
+              <button class="btn-salvar financeiro-boleto">Gerar Boleto</button>
+            </div>
+            <div class="financeiro-card">
+              <h3>Histórico de Pagamentos</h3>
+              <ul class="financeiro-lista">
+                <li>Mai/2025 - Pago</li>
+                <li>Abr/2025 - Pago</li>
+                <li>Mar/2025 - Pago</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="barra-pesquisa barra-pesquisa-financeiro">
+          <input type="text" placeholder="Pesquisar no financeiro...">
+          <button type="submit" title="Pesquisar"><i class="fas fa-search"></i></button>
+        </div>
+        <a href="menu.html" class="voltar">Voltar ao Portal da Raposa</a>
+      </main>
     </div>
-    <div class="user-info">
-      <!-- ... -->
-    </div>
-    <div class="barra-pesquisa">
-      <input type="text" placeholder="Pesquisar...">
-      <button type="submit">🔍</button>
-    </div>
+    <script src="painel-aluno.js"></script>
   </body>
 </html>

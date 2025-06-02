@@ -15,9 +15,11 @@
       </div>
       <nav>
         <a href="../index.html" class="menu-link"><i class="fas fa-home"></i><span>Início</span></a>
-        <a href="#" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
+        <a href="forum.html" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
         <a href="#" class="menu-link"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
         <a href="menu.html" class="menu-link active"><i class="fas fa-user-graduate"></i><span>Painel do Aluno</span></a>
+        <a href="eventos.html" class="menu-link"><i class="fas fa-calendar-alt"></i><span>Eventos</span></a>
+        <a href="biblioteca.html" class="menu-link"><i class="fas fa-book"></i><span>Biblioteca</span></a>
       </nav>
     </aside>
     <div class="container">
@@ -37,30 +39,11 @@
           <p>Matrícula: 2023001 | Curso: Ciência da Computação</p>
         </div>
       </div>
-      <div
-        id="modal-foto"
-        style="
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0, 0, 0, 0.8);
-          align-items: center;
-          justify-content: center;
-          z-index: 9999;
-        "
-      >
+      <div id="modal-foto" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.8); align-items: center; justify-content: center; z-index: 9999;">
         <img
           src="assets/images/aluno1.jpeg"
           alt="Foto do Aluno"
-          style="
-            max-width: 90vw;
-            max-height: 90vh;
-            border-radius: 12px;
-            box-shadow: 0 4px 32px #000a;
-          "
+          style="max-width: 90vw; max-height: 90vh; border-radius: 12px; box-shadow: 0 4px 32px #000a;"
         />
       </div>
       <main>
@@ -75,38 +58,42 @@
             Seja bem-vindo ao seu painel! Aqui você terá as opções de :
           </p>
           <div class="botoes-painel">
-            <a href="#" class="botao-painel"
-              ><img
+            <a href="eventos.html" class="botao-painel">
+              <img
                 src="assets/images/fotoh.jpg"
                 alt="Eventos"
                 class="img-botao-painel"
               />
-              EVENTOS </a
-            ><a href="biblioteca.html" class="botao-painel"
-              ><img
+              <span class="painel-link-laranja">EVENTOS</span>
+            </a>
+            <a href="biblioteca.html" class="botao-painel">
+              <img
                 src="assets/images/foto4.jpg"
                 alt="Biblioteca"
                 class="img-botao-painel"
               />
-              BIBLIOTECA </a
-            ><a href="financeiro.html" class="botao-painel"
-              ><img
+              <span class="painel-link-laranja">BIBLIOTECA</span>
+            </a>
+            <a href="financeiro.html" class="botao-painel">
+              <img
                 src="assets/images/foto3.jpg"
                 alt="Financeiro"
                 class="img-botao-painel"
               />
-              FINANCEIRO </a
-            ><a href="meucurso.html" class="botao-painel"
-              ><img
+              <span class="painel-link-laranja">FINANCEIRO</span>
+            </a>
+            <a href="meucurso.html" class="botao-painel">
+              <img
                 src="assets/images/foto.jpg"
                 alt="Meu Curso"
                 class="img-botao-painel"
               />
-              MEU CURSO</a
-            >
+              <span class="painel-link-laranja">MEU CURSO</span>
+            </a>
           </div>
         </div>
       </main>
     </div>
+    <script src="painel-aluno.js"></script>
   </body>
 </html>

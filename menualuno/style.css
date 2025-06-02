@@ -165,22 +165,107 @@ header p {
   box-shadow: 0 2px 8px #ffb06644;
   border: 2px solid #ffb066;
 }
+.painel-link-laranja {
+  color: #ff8c3c;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.08em;
+  margin-top: 8px;
+  display: block;
+  text-align: center;
+}
 @media (max-width: 1200px) {
+  .container, .biblioteca-container, .eventos-container {
+    max-width: 98vw;
+    padding: 24px 2vw;
+  }
+  .painel-aluno {
+    max-width: 98vw;
+    padding: 18px 2vw;
+  }
   .botoes-painel {
-    gap: 14px;
-  }
-  .botao-painel {
-    width: 120px;
-    min-height: 90px;
-    font-size: 1rem;
-    padding: 10px 8px 8px 8px;
-  }
-  .img-botao-painel {
-    width: 38px;
-    height: 38px;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
   }
 }
-
+@media (max-width: 900px) {
+  .container, .biblioteca-container, .eventos-container {
+    margin: 16px auto 0 auto;
+    max-width: 100vw;
+    padding: 10px 1vw;
+  }
+  .sidebar {
+    display: none;
+  }
+  .painel-aluno {
+    padding: 10px 2vw;
+    min-width: 0;
+  }
+  .biblioteca-logo img, .logo-painel, .logo-eventos {
+    width: 80px;
+    max-width: 100px;
+  }
+  .botoes-painel {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+}
+@media (max-width: 600px) {
+  .container, .biblioteca-container, .eventos-container {
+    padding: 4vw 2vw;
+    border-radius: 10px;
+  }
+  .painel-aluno {
+    padding: 6px 2vw;
+    border-radius: 10px;
+  }
+  .user-info {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin-bottom: 8px;
+  }
+  .user-info img {
+    width: 48px;
+    height: 48px;
+  }
+  .botoes-painel {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+}
+@media (max-width: 480px) {
+  .container, .biblioteca-container, .eventos-container {
+    padding: 2vw 1vw;
+  }
+  .painel-aluno {
+    padding: 2vw 1vw;
+  }
+  .botoes-painel {
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+  }
+  header h1, .painel-aluno h2, .biblioteca-header h1 {
+    font-size: 1.1rem;
+  }
+}
+/* Garantir que cards e painéis fiquem em coluna no mobile */
+.financeiro-info, .eventos-lista, .botoes-painel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  flex-direction: row;
+}
+@media (max-width: 700px) {
+  .financeiro-info, .eventos-lista, .botoes-painel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
 .sidebar {
   width: 64px;
   transition: width 0.3s;
@@ -473,4 +558,61 @@ header p {
   .sidebar {
     display: none;
   }
+}
+
+.eventos-lista .evento-card h3,
+.eventos-lista .evento-card .evento-data,
+.eventos-lista .evento-card p {
+  color: #ff8c3c;
+}
+.financeiro-card h3,
+.financeiro-card strong {
+  color: #ff8c3c;
+}
+.forum-card h3,
+.forum-card p,
+.forum-card .forum-autor {
+  color: #ff8c3c;
+}
+.foto-aluno {
+  cursor: pointer;
+}
+.lista-disciplinas {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 24px auto;
+}
+.progresso-titulo {
+  margin-top: 32px;
+  color: #e87c1c;
+}
+.progresso-barra {
+  background: #eee;
+  border-radius: 20px;
+  width: 80%;
+  margin: 0 auto;
+  height: 24px;
+}
+.progresso-preenchido {
+  background: #e87c1c;
+  width: 60%;
+  height: 24px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  line-height: 24px;
+}
+.financeiro-vencimento {
+  color: #ff8c3c;
+}
+.financeiro-boleto {
+  margin-top: 10px;
+}
+.financeiro-lista {
+  color: #ff8c3c;
+  margin: 0 0 0 18px;
+}
+.barra-pesquisa-financeiro {
+  margin-top: 18px;
 }

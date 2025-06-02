@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Eventos Acadêmicos</title>
+    <title>Fórum - Portal da Raposa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
@@ -24,8 +24,8 @@
     </aside>
     <div class="container">
       <header>
-        <h1>Eventos Acadêmicos</h1>
-        <p>Confira a agenda de eventos, palestras e workshops.</p>
+        <h1>Fórum Acadêmico</h1>
+        <p>Participe de discussões, tire dúvidas e compartilhe conhecimento com outros alunos!</p>
       </header>
       <div class="user-info">
         <img src="assets/images/aluno1.jpeg" alt="Foto do Aluno" id="foto-aluno" />
@@ -37,26 +37,27 @@
       <main>
         <section class="painel-aluno" id="painel-aluno">
           <img src="assets/icons/Logotipo sem fundo(sem nome).png" alt="Logo Raposa" class="logo-painel" />
-          <h2>Próximos Eventos</h2>
-          <div class="barra-pesquisa">
-            <input type="text" id="pesquisa-evento" placeholder="Pesquisar eventos...">
-            <button id="btn-pesquisar" title="Pesquisar"><i class="fas fa-search"></i></button>
-          </div>
-          <div class="eventos-lista" id="eventos-lista">
-            <div class="evento-card">
-              <h3>Semana Acadêmica</h3>
-              <span class="evento-data"><i class="fas fa-calendar-day"></i> 10 a 14 de junho</span>
-              <p>Palestras, workshops e oficinas para todos os alunos.</p>
+          <h2>Discussões Recentes</h2>
+          <form class="forum-form">
+            <input type="text" placeholder="Título da discussão" required />
+            <textarea placeholder="Escreva sua dúvida, sugestão ou comentário..." required></textarea>
+            <button type="submit" class="btn-salvar"><i class="fas fa-paper-plane"></i> Publicar</button>
+          </form>
+          <div class="forum-lista">
+            <div class="forum-card">
+              <h3>Dúvida sobre Algoritmos</h3>
+              <p>Alguém pode explicar a diferença entre recursão e iteração?</p>
+              <span class="forum-autor">por Maria Oliveira • 2 respostas</span>
             </div>
-            <div class="evento-card">
-              <h3>Hackathon UNITASKS</h3>
-              <span class="evento-data"><i class="fas fa-calendar-day"></i> 20 de junho</span>
-              <p>Desafie-se em equipes e concorra a prêmios!</p>
+            <div class="forum-card">
+              <h3>Material de apoio para Banco de Dados</h3>
+              <p>Alguém tem indicações de livros ou vídeos?</p>
+              <span class="forum-autor">por Lucas Lima • 5 respostas</span>
             </div>
-            <div class="evento-card">
-              <h3>Feira de Estágios</h3>
-              <span class="evento-data"><i class="fas fa-calendar-day"></i> 28 de junho</span>
-              <p>Conheça empresas e oportunidades de estágio.</p>
+            <div class="forum-card">
+              <h3>Como estudar para as provas finais?</h3>
+              <p>Compartilhem dicas de estudo!</p>
+              <span class="forum-autor">por Ana Souza • 3 respostas</span>
             </div>
           </div>
         </section>

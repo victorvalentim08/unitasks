@@ -15,57 +15,69 @@
       </div>
       <nav>
         <a href="../index.html" class="menu-link"><i class="fas fa-home"></i><span>Início</span></a>
-        <a href="#" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
+        <a href="forum.html" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
         <a href="#" class="menu-link"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
         <a href="menu.html" class="menu-link"><i class="fas fa-user-graduate"></i><span>Painel do Aluno</span></a>
+        <a href="eventos.html" class="menu-link"><i class="fas fa-calendar-alt"></i><span>Eventos</span></a>
         <a href="biblioteca.html" class="menu-link active"><i class="fas fa-book"></i><span>Biblioteca</span></a>
+        <a href="financeiro.html" class="menu-link"><i class="fas fa-wallet"></i><span>Financeiro</span></a>
+        <a href="meucurso.html" class="menu-link"><i class="fas fa-graduation-cap"></i><span>Meu Curso</span></a>
       </nav>
     </aside>
-    <div class="biblioteca-container">
-      <div class="biblioteca-header">
-        <div>
-          <h1>BIBLIOTECA</h1>
-          <p>
-            Aqui você conseguirá salvar links úteis<br />e anotações sobre
-            cadeiras
-          </p>
-        </div>
-        <div class="biblioteca-logo">
-          <img src="assets/icons/Logotipo sem fundo(sem nome).png" alt="Logo" />
-          <span>UNITASKS</span>
-        </div>
-      </div>
-      <form class="biblioteca-form">
-        <div class="form-row">
-          <input type="text" placeholder="Digite o nome da cadeira" />
-          <input type="text" placeholder="Digite o semestre" />
-        </div>
-        <div class="form-row">
-          <input type="text" placeholder="Digite o título da anotação / link" />
-          <input type="text" placeholder="Digite o curso" />
-        </div>
-        <input
-          type="text"
-          class="input-grande"
-          placeholder="Digite o conteúdo que deseja salvar na sua biblioteca"
-        />
-        <button type="submit" class="btn-salvar">salvar</button>
-      </form>
-      <div class="cadeiras">
-        <button>Cadeira 01</button> <button>Cadeira 02</button>
-        <button>Cadeira 03</button> <button>Cadeira 04</button>
-        <button>Cadeira 05</button> <button>Cadeira 06</button>
-      </div>
+    <div class="container">
+      <header>
+        <h1>Biblioteca</h1>
+        <p>Aqui você conseguirá salvar links úteis e anotações sobre cadeiras.</p>
+      </header>
       <div class="user-info">
-        <!-- ... -->
+        <img src="assets/images/aluno1.jpeg" alt="Foto do Aluno" id="foto-aluno" />
+        <div class="user-details">
+          <h2>João Silva</h2>
+          <p>Matrícula: 2023001 | Curso: Ciência da Computação</p>
+        </div>
       </div>
-      <div class="barra-pesquisa">
-        <input type="text" placeholder="Pesquisar...">
-        <button type="submit">🔍</button>
-      </div>
+      <main>
+        <section class="painel-aluno" id="painel-aluno">
+          <img src="assets/icons/Logotipo sem fundo(sem nome).png" alt="Logo Raposa" class="logo-painel" />
+          <h2>Materiais Salvos</h2>
+          <div class="botoes-painel">
+            <a href="#" class="botao-painel">
+              <img src="assets/images/foto4.jpg" alt="Meus Materiais" class="img-botao-painel" />
+              <span class="painel-link-laranja">MEUS MATERIAIS</span>
+            </a>
+            <a href="#" class="botao-painel">
+              <img src="assets/images/fotog..jpg" alt="Anotações" class="img-botao-painel" />
+              <span class="painel-link-laranja">ANOTAÇÕES</span>
+            </a>
+            <a href="#" class="botao-painel">
+              <img src="assets/images/fotor.jpg" alt="Livros" class="img-botao-painel" />
+              <span class="painel-link-laranja">LIVROS</span>
+            </a>
+          </div>
+          <form class="biblioteca-form">
+            <div class="form-row">
+              <input type="text" placeholder="Digite o nome da cadeira" />
+              <input type="text" placeholder="Digite o semestre" />
+            </div>
+            <div class="form-row">
+              <input type="text" placeholder="Digite o título da anotação / link" />
+              <input type="text" placeholder="Digite o curso" />
+            </div>
+            <input type="text" class="input-grande" placeholder="Digite o conteúdo que deseja salvar na sua biblioteca" />
+            <button type="submit" class="btn-salvar">salvar</button>
+          </form>
+          <div class="cadeiras">
+            <button>Cadeira 01</button> <button>Cadeira 02</button>
+            <button>Cadeira 03</button> <button>Cadeira 04</button>
+            <button>Cadeira 05</button> <button>Cadeira 06</button>
+          </div>
+        </section>
+        <div class="barra-pesquisa">
+          <input type="text" placeholder="Pesquisar...">
+          <button type="submit">🔍</button>
+        </div>
+      </main>
     </div>
-    <script>
-      // Nenhum JS necessário para toggle, pois o hover já é feito via CSS
-    </script>
+    <script src="painel-aluno.js"></script>
   </body>
 </html>
