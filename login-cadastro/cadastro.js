@@ -29,5 +29,5 @@ document.querySelector(".formulario").addEventListener("submit", function(event)
 
     alert("Cadastro realizado com sucesso!");
 
-    window.location.replace("../index.html");
+    window.location.replace("/unitasks/");
 });
