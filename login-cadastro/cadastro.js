@@ -29,5 +29,5 @@ document.querySelector(".formulario").addEventListener("submit", function(event)
 
     alert("Cadastro realizado com sucesso!");
 
-    window.location.href = "https://misaelcsc.github.io/unitasks/";
+    window.location.href = "/unitasks/";
 });
