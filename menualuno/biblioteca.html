@@ -6,6 +6,7 @@
     <title>Biblioteca</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="backend_biblioteca/script.js" defer></script>
   </head>
   <body>
     <div class="bg-overlay"></div>
@@ -66,18 +67,56 @@
             <input type="text" class="input-grande" placeholder="Digite o conteúdo que deseja salvar na sua biblioteca" />
             <button type="submit" class="btn-salvar">salvar</button>
           </form>
-          <div class="cadeiras">
-            <button>Cadeira 01</button> <button>Cadeira 02</button>
-            <button>Cadeira 03</button> <button>Cadeira 04</button>
-            <button>Cadeira 05</button> <button>Cadeira 06</button>
-          </div>
+    <div class="cadeiras">
+        <div class="bloco-cadeira">
+          <button class="btn-cadeira" data-cadeira="1" >Cadeira 01</button>
+          <button class="btn-excluir" data-cadeira="1">Excluir</button>
+          <div id="anotacoes-1" class="anotacoes"></div>
+        </div>
+
+        <div class="bloco-cadeira">
+          <button class="btn-cadeira" data-cadeira="2">Cadeira 02</button>
+          <button class="btn-excluir" data-cadeira="2">Excluir</button>
+          <div id="anotacoes-2" class="anotacoes"></div>
+        </div>
+      
+        <div class="bloco-cadeira">
+          <button class="btn-cadeira" data-cadeira="3">Cadeira 03</button>
+          <button class="btn-excluir" data-cadeira="3">Excluir</button>
+          <div id="anotacoes-3" class="anotacoes"></div>
+        </div>
+
+        <div class="bloco-cadeira">
+          <button class="btn-cadeira" data-cadeira="4">Cadeira 04</button>
+          <button class="btn-excluir" data-cadeira="4">Excluir</button>
+          <div id="anotacoes-4" class="anotacoes"></div>
+        </div>
+
+        <div class="bloco-cadeira">
+          <button class="btn-cadeira" data-cadeira="5">Cadeira 05</button>
+          <button class="btn-excluir" data-cadeira="5">Excluir</button>
+          <div id="anotacoes-5" class="anotacoes"></div>
+        </div>
+
+        <div class="bloco-cadeira">
+          <button class="btn-cadeira" data-cadeira="6">Cadeira 06</button>
+          <button class="btn-excluir" data-cadeira="6">Excluir</button>
+          <div id="anotacoes-6" class="anotacoes"></div>
+        </div>
+      </div>
         </section>
         <div class="barra-pesquisa">
           <input type="text" placeholder="Pesquisar...">
           <button type="submit">🔍</button>
         </div>
       </main>
+      <div id="modal-anotacoes" class="modal" style="display: none;">
+      <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+        <h3>Anotações da Cadeira <span id="modal-cadeira-numero"></span></h3>
+        <div id="lista-anotacoes"></div>
+      </div>
     </div>
-    <script src="painel-aluno.js"></script>
+    </div>
   </body>
 </html>
