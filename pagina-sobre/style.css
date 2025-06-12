@@ -70,11 +70,10 @@ body.pagina-sobre {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* Removi justify-content para o alinhamento começar do topo */
   flex-grow: 1;
   width: 100%;
-  /* Permite rolagem interna se o conteúdo exceder a altura */
-  overflow-y: auto; 
+  overflow-y: auto; /* Permite scroll apenas dentro desta área */
 }
 
 .card-projeto {
@@ -198,7 +197,7 @@ body.pagina-sobre {
   margin-top: 0;
   opacity: 0;
   overflow: hidden;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.9);
   transition: opacity 0.3s ease-in-out 0.1s,
@@ -284,27 +283,17 @@ footer {
   z-index: 3;
 }
 
-/* Para tablets e celulares em modo paisagem (telas até 992px) */
-@media (max-width: 992px) {
-  .caixa-principal {
-    height: auto;
-    max-height: 85vh;
-    padding: 25px;
-  }
-}
-
-
-/* Para celulares (telas até 768px) */
+/* Para tablets e celulares (telas até 768px) */
 @media (max-width: 768px) {
   body.pagina-sobre {
     padding: 20px 10px;
-    align-items: flex-start;
-    overflow: auto;
+    overflow: auto; 
   }
 
   .caixa-principal {
-    max-height: none;
-    margin-top: 20px;
+    height: auto;
+    min-height: 80vh;
+    padding: 20px;
     overflow: visible;
   }
 
@@ -313,71 +302,40 @@ footer {
   }
 
   .titulo-pagina {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
-  /* Mostra o conteúdo dos cards por padrão, sem precisar de hover */
+  .container-cards-membros {
+    gap: 15px;
+  }
+}
+
+/* Para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .titulo-pagina {
+    font-size: 1.6rem;
+  }
+
   .card-projeto {
-    height: auto;
-    padding: 15px 20px;
-    justify-content: flex-start;
+    height: 90px;
   }
-  .card-projeto .icone-raposa {
-    display: none; /* Esconde o ícone no celular para dar espaço ao texto */
-  }
-  .card-projeto .descricao-projeto {
-    opacity: 1;
-    max-height: none;
-    margin-top: 0;
-    font-size: 0.85rem;
+
+  .card-projeto:hover {
+    height: 150px;
   }
 
   .container-cards-membros {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    width: 100%;
   }
 
   .card-membro {
-    width: 95%;
-    max-width: 350px;
-    height: auto;
-    padding: 15px;
-    justify-content: flex-start;
-  }
-  .card-membro .foto-membro {
-    width: 75px;
-    height: 75px;
-    margin-bottom: 10px;
-  }
-  .card-membro .nome-membro {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-  .card-membro .descricao-membro {
-    opacity: 1;
-    max-height: none;
-    margin-top: 0;
-  }
-}
-
-
-/* Para celulares com telas muito pequenas (até 380px) */
-@media (max-width: 380px) {
-  .titulo-pagina {
-    font-size: 1.6rem;
-  }
-
-  .card-membro .nome-membro {
-    font-size: 1rem;
-  }
-
-  .card-membro .descricao-membro {
-    font-size: 0.8rem;
+    width: 90%;
+    max-width: 320px;
   }
 
   footer {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    padding: 8px 0;
   }
 }
