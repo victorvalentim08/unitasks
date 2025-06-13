@@ -8,8 +8,6 @@
 
 body.pagina-sobre {
   display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   padding: 50px 20px;
   position: relative;
@@ -23,14 +21,108 @@ body.pagina-sobre {
   overflow: hidden;
 }
 
-.overlay-bg {
+.sidebar {
+  width: 64px;
+  transition: width 0.3s;
+  overflow: hidden;
+  background: linear-gradient(180deg, #2d0612 0%, #5a0b25 100%);
+  color: #fff;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
   position: fixed;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 1;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 16px #0006;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.sidebar:hover {
+  width: 220px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.sidebar:hover nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar .menu-icon {
+  margin: 28px 0 0 0;
+  cursor: pointer;
+}
+
+.sidebar .menu-icon span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+  margin: 7px 0;
+  border-radius: 2px;
+}
+
+.menu-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.12rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.menu-link i {
+  font-size: 1.3rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.menu-link span {
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.sidebar:hover .menu-link span {
+  opacity: 1;
+}
+
+.menu-link.active, .menu-link:hover {
+  background: #fff2;
+  color: #ffb066;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.menu-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #ffb066 0%, #ff8c3c 100%);
 }
 
 .container-pagina {
@@ -38,6 +130,7 @@ body.pagina-sobre {
   z-index: 2;
   width: 100%;
   max-width: 1200px;
+  margin-left: 80px; /* Espaço para sidebar */
 }
 
 .caixa-principal {
@@ -55,6 +148,8 @@ body.pagina-sobre {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  width: 90%;
+  max-width: 1200px;
 }
 
 .titulo-pagina {
@@ -141,92 +236,72 @@ body.pagina-sobre {
 
 .container-cards-membros {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  width: 90%;
-  max-width: 940px;
-  padding: 10px 0;
-  flex-shrink: 0;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
 }
 
 .card-membro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  background: orange;
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px #0002;
   width: 220px;
-  height: 200px;
-  padding: 10px;
-  flex-shrink: 0;
-  background-color: orange;
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 220px;
+  padding: 24px 16px 16px 16px;
   text-align: center;
+  transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
+  cursor: pointer;
+  position: relative;
   overflow: hidden;
-  transition: height 0.3s ease-in-out, box-shadow 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
 .card-membro .foto-membro {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
-  flex-shrink: 0;
-  background-color: #e0e0e0;
-  border: 3px solid white;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  transition: width 0.3s ease-in-out,
-              height 0.3s ease-in-out,
-              margin-bottom 0.3s ease-in-out;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.card-membro .nome-membro {
-  margin-bottom: 0;
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.2;
-  transition: margin-bottom 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  background: #fff;
+  margin-bottom: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #0002;
+  transition: opacity 0.3s, height 0.3s, width 0.3s, margin-bottom 0.3s;
 }
 
 .card-membro .descricao-membro {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  margin-top: 4px;
+  text-align: center;
+  word-break: break-word;
   max-height: 0;
-  margin-top: 0;
   opacity: 0;
   overflow: hidden;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  color: rgba(255, 255, 255, 0.9);
-  transition: opacity 0.3s ease-in-out 0.1s,
-              max-height 0.3s ease-in-out 0.1s,
-              margin-top 0.3s ease-in-out 0.1s;
+  transition: opacity 0.3s, max-height 0.3s, margin-top 0.3s;
 }
 
 .card-membro:hover {
-  height: 300px;
-  padding: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  justify-content: flex-start;
+  box-shadow: 0 8px 32px #ffb06688, 0 2px 8px #0002;
+  transform: translateY(-10px) scale(1.05);
+  z-index: 2;
 }
 
 .card-membro:hover .foto-membro {
-  width: 75px;
-  height: 75px;
-  margin-bottom: 5px;
-}
-
-.card-membro:hover .nome-membro {
-  font-size: 1rem;
-  margin-bottom: 5px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin-bottom: 0;
 }
 
 .card-membro:hover .descricao-membro {
   opacity: 1;
-  max-height: 150px;
-  margin-top: 5px;
+  max-height: 100px;
+  margin-top: 10px;
 }
 
 .chuva {
@@ -265,6 +340,8 @@ body.pagina-sobre {
 
 #foto-victor {
   background-image: url('../Banco de imagens/imgParticipantes/victor.png');
+  background-size: cover;
+  background-position: center;
 }
 
 #foto-yuri {
@@ -335,5 +412,14 @@ footer {
   footer {
     font-size: 0.75rem;
     padding: 8px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  .container-pagina {
+    margin-left: 0;
   }
 }

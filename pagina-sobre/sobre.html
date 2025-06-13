@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre</title>
-  <link rel="stylesheet" href="style.css">
-  <script src = "script.js" defer></script> 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="../menualuno/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="pagina-sobre">
-  <div class="overlay-bg"></div>
-  <div class="chuva"></div>
+  <div class="bg-overlay"></div>
+  <aside class="sidebar">
+    <div class="menu-icon">
+      <span></span> <span></span> <span></span>
+    </div>
+    <nav>
+      <a href="../index.html" class="menu-link"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="../menualuno/forum.html" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
+      <a href="../pagina-sobre/sobre.html" class="menu-link active"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
+      <a href="../menualuno/menu.html" class="menu-link"><i class="fas fa-user-graduate"></i><span>Painel do Aluno</span></a>
+      <a href="../menualuno/eventos.html" class="menu-link"><i class="fas fa-calendar-alt"></i><span>Eventos</span></a>
+      <a href="../menualuno/biblioteca.html" class="menu-link"><i class="fas fa-book"></i><span>Biblioteca</span></a>
+      <a href="../menualuno/financeiro.html" class="menu-link"><i class="fas fa-wallet"></i><span>Financeiro</span></a>
+      <a href="../menualuno/meucurso.html" class="menu-link"><i class="fas fa-graduation-cap"></i><span>Meu Curso</span></a>
+    </nav>
+  </aside>
   <section class="container-pagina">
     <div class="caixa-principal">
       <h1 class="titulo-pagina">Sobre</h1>
-
       <div class="conteudo-centralizado">
         <div class="card-projeto">
           <img src="../Banco de imagens/Logo(sem nome).png" alt="Ícone de Raposa" class="icone-raposa">
@@ -22,32 +37,24 @@
             Apresento o Unitasks, um sistema intuitivo de gerenciamento de tarefas, concebido como projeto universitário para aprimorar habilidades em HTML, CSS e JavaScript. A plataforma permite que usuários efetuem login, adicionem novas tarefas e consultem sua lista de pendências de maneira eficiente. O projeto explora ainda a organização financeira e um acervo de conteúdos, aplicando tecnologias como PHP e banco de dados para uma experiência web completa.
           </p>
         </div>
-
         <div class="container-cards-membros">
           <div class="card-membro">
-            <div class="foto-membro" id="foto-misael">
-            </div>
+            <div class="foto-membro" id="foto-misael"></div>
             <h2 class="nome-membro">Misael</h2>
             <p class="descricao-membro">HTML, CSS, JS e PHP. Tela de Cadastro e Banco de Dados.</p>
           </div>
-
           <div class="card-membro">
-            <div class="foto-membro" id="foto-nicolas">
-            </div>
+            <div class="foto-membro" id="foto-nicolas"></div>
             <h2 class="nome-membro">Nicolas</h2>
             <p class="descricao-membro">HTML, CSS e JS. Página Sobre.</p>
           </div>
-
           <div class="card-membro">
-            <div class="foto-membro" id="foto-victor">
-            </div>
+            <div class="foto-membro" id="foto-victor"></div>
             <h2 class="nome-membro">Victor</h2>
             <p class="descricao-membro">HTML, CSS E JS. Tela Home e Tela de Login.</p>
           </div>
-
           <div class="card-membro">
-            <div class="foto-membro" id="foto-yuri">
-            </div>
+            <div class="foto-membro" id="foto-yuri"></div>
             <h2 class="nome-membro">Yuri</h2>
             <p class="descricao-membro">HTML, CSS e JS. Menu Aluno.</p>
           </div>
@@ -57,6 +64,6 @@
   </section>
   <footer>
       © 2025 Projeto Unitasks. Todos os direitos reservados.
-    </footer>
+  </footer>
 </body>
 </html>
