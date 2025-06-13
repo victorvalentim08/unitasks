@@ -335,7 +335,9 @@ body.pagina-sobre {
 }
 
 #foto-nicolas {
-  background-image: url('../Banco de imagens/imgParticipantes/victor.png');
+  background-image: url('../Banco de imagens/imgParticipantes/nicolas.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 #foto-victor {
