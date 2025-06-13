@@ -70,7 +70,7 @@ body.pagina-sobre {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* <<< AQUI ESTÁ A CORREÇÃO PARA A CENTRALIZAÇÃO NO PC */
+  justify-content: center; /* CORRIGE A CENTRALIZAÇÃO NO DESKTOP */
   flex-grow: 1;
   width: 100%;
   overflow-y: auto; 
@@ -283,23 +283,22 @@ footer {
   z-index: 3;
 }
 
-/* --- SEÇÃO DE RESPONSIVIDADE CORRIGIDA E MELHORADA --- */
 
-/* Para tablets e celulares (telas até 768px) */
+/* --- SEÇÃO DE RESPONSIVIDADE --- */
+
 @media (max-width: 768px) {
   body.pagina-sobre {
     padding: 0;
-    overflow: auto; 
-    align-items: flex-start;
+    overflow-y: auto;
   }
 
   .caixa-principal {
+    width: 100%;
     height: auto;
     min-height: 100vh;
-    padding: 40px 15px 80px 15px;
-    overflow: visible;
     border-radius: 0;
-    width: 100%;
+    padding: 25px 15px 80px 15px; /* Aumenta o padding inferior para o footer */
+    overflow: visible;
   }
 
   .conteudo-centralizado {
@@ -308,19 +307,27 @@ footer {
   }
 
   .titulo-pagina {
+    font-size: 1.8rem;
     margin-top: 20px;
-    font-size: 1.9rem;
+    margin-bottom: 25px;
   }
 
-  /* --- Mostra todo o conteúdo dos cards por padrão no mobile --- */
+  /* Exibe o conteúdo dos cards por padrão */
 
-  .card-projeto, .card-projeto:hover {
+  .card-projeto {
     height: auto;
-    padding: 15px 20px;
+    width: 95%; /* Define largura para o card do projeto */
+    max-width: 450px; /* Define uma largura máxima */
+    padding: 20px;
     transition: none;
-    justify-content: center;
   }
   
+  .card-projeto:hover {
+    height: auto;
+    padding: 20px;
+    transform: none;
+  }
+
   .card-projeto .icone-raposa {
     display: none;
   }
@@ -334,50 +341,45 @@ footer {
   .container-cards-membros {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     width: 100%;
   }
 
-  .card-membro, .card-membro:hover {
-    width: 90%;
-    max-width: 350px;
+  .card-membro {
     height: auto;
+    width: 95%; /* Define largura para os cards dos membros */
+    max-width: 450px; /* Define uma largura máxima */
     padding: 20px;
-    justify-content: center;
     transition: none;
   }
 
+  .card-membro:hover {
+    height: auto;
+    padding: 20px;
+    transform: none;
+  }
+  
   .card-membro .foto-membro {
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
   }
-
+  
   .card-membro .nome-membro {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
   }
-
+  
   .card-membro .descricao-membro {
     opacity: 1;
     max-height: none;
     margin-top: 0;
+    line-height: 1.5;
   }
   
   footer {
     position: relative;
     margin-top: -60px;
     padding-bottom: 20px;
-  }
-}
-
-/* Para telas muito pequenas (até 480px) */
-@media (max-width: 480px) {
-  .titulo-pagina {
-    font-size: 1.6rem;
-  }
-
-  footer {
-    font-size: 0.75rem;
   }
 }
