@@ -49,8 +49,8 @@ body.pagina-sobre {
   margin: 0 auto;
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px); 
-  -webkit-backdrop-filter: blur(15px); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
@@ -70,10 +70,10 @@ body.pagina-sobre {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Removi justify-content para o alinhamento começar do topo */
+  justify-content: center;
   flex-grow: 1;
   width: 100%;
-  overflow-y: auto; /* Permite scroll apenas dentro desta área */
+  overflow-y: auto;
 }
 
 .card-projeto {
@@ -176,8 +176,8 @@ body.pagina-sobre {
   background-color: #e0e0e0;
   border: 3px solid white;
   border-radius: 50%;
-  transition: width 0.3s ease-in-out, 
-              height 0.3s ease-in-out, 
+  transition: width 0.3s ease-in-out,
+              height 0.3s ease-in-out,
               margin-bottom 0.3s ease-in-out;
   background-size: cover;
   background-position: center;
@@ -283,7 +283,6 @@ footer {
   z-index: 3;
 }
 
-/* Para tablets e celulares (telas até 768px) */
 @media (max-width: 768px) {
   body.pagina-sobre {
     padding: 20px 10px;
@@ -310,7 +309,6 @@ footer {
   }
 }
 
-/* Para telas muito pequenas (até 480px) */
 @media (max-width: 480px) {
   .titulo-pagina {
     font-size: 1.6rem;
