@@ -70,10 +70,10 @@ body.pagina-sobre {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* CORRIGE A CENTRALIZAÇÃO NO DESKTOP */
+  /* Removi justify-content para o alinhamento começar do topo */
   flex-grow: 1;
   width: 100%;
-  overflow-y: auto; 
+  overflow-y: auto; /* Permite scroll apenas dentro desta área */
 }
 
 .card-projeto {
@@ -283,103 +283,59 @@ footer {
   z-index: 3;
 }
 
-
-/* --- SEÇÃO DE RESPONSIVIDADE --- */
-
+/* Para tablets e celulares (telas até 768px) */
 @media (max-width: 768px) {
   body.pagina-sobre {
-    padding: 0;
-    overflow-y: auto;
+    padding: 20px 10px;
+    overflow: auto; 
   }
 
   .caixa-principal {
-    width: 100%;
     height: auto;
-    min-height: 100vh;
-    border-radius: 0;
-    padding: 25px 15px 80px 15px; /* Aumenta o padding inferior para o footer */
+    min-height: 80vh;
+    padding: 20px;
     overflow: visible;
   }
 
   .conteudo-centralizado {
     overflow-y: visible;
-    justify-content: flex-start;
   }
 
   .titulo-pagina {
-    font-size: 1.8rem;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    font-size: 1.9rem;
   }
 
-  /* Exibe o conteúdo dos cards por padrão */
+  .container-cards-membros {
+    gap: 15px;
+  }
+}
+
+/* Para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  .titulo-pagina {
+    font-size: 1.6rem;
+  }
 
   .card-projeto {
-    height: auto;
-    width: 95%; /* Define largura para o card do projeto */
-    max-width: 450px; /* Define uma largura máxima */
-    padding: 20px;
-    transition: none;
+    height: 90px;
   }
-  
+
   .card-projeto:hover {
-    height: auto;
-    padding: 20px;
-    transform: none;
-  }
-
-  .card-projeto .icone-raposa {
-    display: none;
-  }
-
-  .card-projeto .descricao-projeto {
-    opacity: 1;
-    max-height: none;
-    margin-top: 0;
+    height: 150px;
   }
 
   .container-cards-membros {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    width: 100%;
   }
 
   .card-membro {
-    height: auto;
-    width: 95%; /* Define largura para os cards dos membros */
-    max-width: 450px; /* Define uma largura máxima */
-    padding: 20px;
-    transition: none;
+    width: 90%;
+    max-width: 320px;
   }
 
-  .card-membro:hover {
-    height: auto;
-    padding: 20px;
-    transform: none;
-  }
-  
-  .card-membro .foto-membro {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-  }
-  
-  .card-membro .nome-membro {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  .card-membro .descricao-membro {
-    opacity: 1;
-    max-height: none;
-    margin-top: 0;
-    line-height: 1.5;
-  }
-  
   footer {
-    position: relative;
-    margin-top: -60px;
-    padding-bottom: 20px;
+    font-size: 0.75rem;
+    padding: 8px 0;
   }
 }
