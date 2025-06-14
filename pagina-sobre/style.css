@@ -21,16 +21,22 @@ body.pagina-sobre {
   overflow: hidden;
 }
 
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
 .sidebar {
   width: 64px;
   transition: width 0.3s;
-  overflow: hidden;
   background: linear-gradient(180deg, #2d0612 0%, #5a0b25 100%);
   color: #fff;
   height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
-  overflow-y: auto;
   position: fixed;
   left: 0;
   top: 0;
@@ -130,7 +136,7 @@ body.pagina-sobre {
   z-index: 2;
   width: 100%;
   max-width: 1200px;
-  margin-left: 80px; /* Espaço para sidebar */
+  margin-left: 80px;
 }
 
 .caixa-principal {
@@ -138,7 +144,7 @@ body.pagina-sobre {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 700px;
+  min-height: 700px;
   margin: 0 auto;
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
@@ -171,13 +177,20 @@ body.pagina-sobre {
   overflow-y: auto;
 }
 
+.conteudo-alinhado {
+  width: 100%;
+  max-width: 976px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card-projeto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  max-width: 940px;
+  width: 100%;
   height: 100px;
   margin-bottom: 20px;
   padding: 0px;
@@ -196,10 +209,7 @@ body.pagina-sobre {
   width: 160px;
   height: 120px;
   margin-bottom: 0;
-  transition: opacity 0.3s ease-in-out,
-              margin-bottom 0.3s ease-in-out,
-              height 0.3s ease-in-out,
-              width 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, margin-bottom 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 .card-projeto .descricao-projeto {
@@ -209,9 +219,7 @@ body.pagina-sobre {
   overflow: hidden;
   font-size: 0.9rem;
   line-height: 1.4;
-  transition: opacity 0.3s ease-in-out,
-              max-height 0.3s ease-in-out,
-              margin-top 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out, margin-top 0.3s ease-in-out;
 }
 
 .card-projeto:hover {
@@ -240,79 +248,160 @@ body.pagina-sobre {
   justify-content: center;
   gap: 32px;
   margin-top: 32px;
+  width: 100%;
 }
 
 .card-membro {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background: orange;
   color: #fff;
   border-radius: 14px;
   box-shadow: 0 4px 16px #0002;
   width: 220px;
-  min-height: 220px;
-  padding: 24px 16px 16px 16px;
+  height: 250px;
+  padding: 20px 16px;
   text-align: center;
-  transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
+  transition: box-shadow 0.3s, transform 0.3s;
   cursor: pointer;
-  position: relative;
   overflow: hidden;
 }
 
 .card-membro .foto-membro {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background: #fff;
-  margin-bottom: 12px;
-  object-fit: cover;
-  box-shadow: 0 2px 8px #0002;
-  transition: opacity 0.3s, height 0.3s, width 0.3s, margin-bottom 0.3s;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px #0003;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease-in-out, transform 0.4s ease-in-out;
 }
 
-.card-membro .descricao-membro {
-  font-size: 1rem;
-  color: #fff;
-  margin: 0;
-  margin-top: 4px;
-  text-align: center;
-  word-break: break-word;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.3s, max-height 0.3s, margin-top 0.3s;
+.card-membro .nome-membro {
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .card-membro:hover {
   box-shadow: 0 8px 32px #ffb06688, 0 2px 8px #0002;
-  transform: translateY(-10px) scale(1.05);
-  z-index: 2;
+  transform: translateY(-10px);
 }
 
-.card-membro:hover .foto-membro {
+.card-membro:hover .foto-membro,
+.card-membro:hover .nome-membro {
   opacity: 0;
-  height: 0;
-  width: 0;
-  margin-bottom: 0;
 }
 
-.card-membro:hover .descricao-membro {
+.card-conteudo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 0.3s 0.1s ease-in-out, visibility 0.3s 0.1s ease-in-out;
+}
+
+.card-membro:hover .card-conteudo-hover {
   opacity: 1;
-  max-height: 100px;
-  margin-top: 10px;
+  visibility: visible;
+}
+
+.nome-membro-hover {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.linguagens-icones {
+  display: flex;
+  gap: 15px;
+  font-size: 1.4rem;
+}
+
+.card-conteudo-hover .descricao-membro {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 2.2rem;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.25) rotate(5deg);
+  color: #5a0b25;
+}
+
+#foto-misael { background-image: url('../Banco de imagens/imgParticipantes/misael.jpg'); }
+#foto-nicolas { background-image: url('../Banco de imagens/imgParticipantes/nicolas.jpg'); }
+#foto-victor { background-image: url('../Banco de imagens/imgParticipantes/victor.png'); }
+#foto-yuri { background-image: url('../Banco de imagens/imgParticipantes/yuri.jpg'); }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  body.pagina-sobre { padding: 20px 10px; overflow: auto; }
+  .caixa-principal { height: auto; min-height: 80vh; padding: 20px; overflow: visible; }
+  .conteudo-centralizado { overflow-y: visible; }
+  .titulo-pagina { font-size: 1.9rem; }
+  .container-cards-membros { gap: 20px; }
+}
+
+@media (max-width: 480px) {
+  .titulo-pagina { font-size: 1.6rem; }
+  .card-projeto { height: 90px; }
+  .card-projeto:hover { height: 150px; }
+  .container-cards-membros { flex-direction: column; align-items: center; }
+  .card-membro { width: 90%; max-width: 320px; height: 250px; }
+  footer { font-size: 0.75rem; padding: 8px 0; position: relative; }
+}
+
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .container-pagina { margin-left: 0; }
 }
 
 .chuva {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
 .drop {
@@ -327,103 +416,5 @@ body.pagina-sobre {
 @keyframes fall {
   to {
     transform: translateY(100vh);
-  }
-}
-
-#foto-misael {
-  background-image: url('../Banco de imagens/imgParticipantes/victor.png');
-}
-
-#foto-nicolas {
-  background-image: url('../Banco de imagens/imgParticipantes/nicolas.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-#foto-victor {
-  background-image: url('../Banco de imagens/imgParticipantes/victor.png');
-  background-size: cover;
-  background-position: center;
-}
-
-#foto-yuri {
-  background-image: url('../Banco de imagens/imgParticipantes/yuri.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.8rem;
-  z-index: 3;
-}
-
-@media (max-width: 768px) {
-  body.pagina-sobre {
-    padding: 20px 10px;
-    overflow: auto; 
-  }
-
-  .caixa-principal {
-    height: auto;
-    min-height: 80vh;
-    padding: 20px;
-    overflow: visible;
-  }
-
-  .conteudo-centralizado {
-    overflow-y: visible;
-  }
-
-  .titulo-pagina {
-    font-size: 1.9rem;
-  }
-
-  .container-cards-membros {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .titulo-pagina {
-    font-size: 1.6rem;
-  }
-
-  .card-projeto {
-    height: 90px;
-  }
-
-  .card-projeto:hover {
-    height: 150px;
-  }
-
-  .container-cards-membros {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-membro {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  footer {
-    font-size: 0.75rem;
-    padding: 8px 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .sidebar {
-    display: none;
-  }
-  .container-pagina {
-    margin-left: 0;
   }
 }
