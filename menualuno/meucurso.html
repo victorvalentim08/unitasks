@@ -6,19 +6,23 @@
   <title>Meu Curso</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="meucurso.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <div class="background-overlay"></div>
   
   <aside class="sidebar">
-    <div class="menu-toggle">&#9776;</div>
+    <div class="menu-icon">
+      <span></span> <span></span> <span></span>
+    </div>
     <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Biblioteca</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Painel do Aluno</a></li>
-      </ul>
+      <a href="../index.html" class="menu-link"><i class="fas fa-home"></i><span>Início</span></a>
+      <a href="forum.html" class="menu-link"><i class="fas fa-comments"></i><span>Fórum</span></a>
+      <a href="../pagina-sobre/sobre.html" class="menu-link"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
+      <a href="menu.html" class="menu-link"><i class="fas fa-user-graduate"></i><span>Painel do Aluno</span></a>
+      <a href="eventos.html" class="menu-link"><i class="fas fa-calendar-alt"></i><span>Eventos</span></a>
+      <a href="biblioteca.html" class="menu-link"><i class="fas fa-book"></i><span>Biblioteca</span></a>
+      <a href="meucurso.html" class="menu-link active"><i class="fas fa-graduation-cap"></i><span>Meu Curso</span></a>
     </nav>
   </aside>
 
@@ -43,6 +47,6 @@
     </div>
   </main>
 
-  <img class="logo" src="../Banco de imagens/logo.png" alt="Logo UNTASKS" />
+  <img class="logo" src="../Banco de imagens/logo.png" alt="Logo" />
 </body>
 </html>
