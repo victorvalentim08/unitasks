@@ -397,62 +397,44 @@ footer {
   }
 }
 
+/* ===== SEÇÃO DE RESPONSIVIDADE (COM EFEITO DE TOQUE/HOVER) ===== */
+
 @media (max-width: 900px) {
-
-  body.pagina-sobre {
-    padding: 0;
-    overflow-y: auto;
-    display: block;
-
   .sidebar {
     display: none;
   }
 
   .container-pagina {
-    margin-left: 0;
-    padding: 20px 10px;
+    margin-left: 0; /* Centraliza a página */
   }
 
+  /* Mantém as regras de layout para o corpo da página */
+  body.pagina-sobre {
+    padding: 0;
+    overflow-y: auto;
+    display: block;
+  }
   .caixa-principal {
     width: 100%;
-    min-height: auto;
+    min-height: 100vh;
     height: auto;
-    border-radius: 20px;
+    border-radius: 0;
     padding: 25px 15px 80px 15px;
     overflow: visible;
   }
-
   .conteudo-centralizado {
     overflow-y: visible;
     justify-content: flex-start;
   }
-
   .titulo-pagina {
     font-size: 2rem;
     margin-top: 10px;
     margin-bottom: 25px;
   }
-
-  .card-projeto, .card-projeto:hover {
-    height: auto;
-    padding: 20px;
-    transition: none;
-    transform: none;
-  }
-
-  .card-projeto .icone-raposa {
-    width: 100px;
-    height: 80px;
-    opacity: 1;
-    margin-bottom: 15px;
-    transition: none;
-  }
-
-  .card-projeto .descricao-projeto {
-    opacity: 1;
-    max-height: none;
-    margin-top: 0;
-    font-size: 0.95rem;
+  
+  /* Ajusta o conteúdo para empilhar e ter um tamanho razoável */
+  .conteudo-alinhado {
+      max-width: 450px; /* Limita a largura máxima no mobile */
   }
 
   .container-cards-membros {
@@ -460,47 +442,18 @@ footer {
     align-items: center;
     gap: 25px;
   }
-
-  .card-membro, .card-membro:hover {
-    width: 95%;
-    max-width: 400px;
-    height: auto;
-    padding: 20px;
-    transform: none;
-    transition: none;
-    overflow: visible;
+  
+  .card-membro {
+      width: 95%;
   }
 
-  .card-membro:hover .foto-membro,
-  .card-membro:hover .nome-membro {
-    opacity: 1;
-  }
-
-  .card-membro .nome-membro {
-    display: none;
-  }
-
-  .card-conteudo-hover {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin-top: 15px;
-    transition: none;
-    height: auto;
-  }
-
-  /* Rodapé */
   footer {
     position: relative;
     margin-top: 40px;
     padding: 20px 0;
     color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    z-index: 5;
   }
+  
+  /* Nenhuma outra regra é necessária. Ao não sobrescrever os
+     estilos de hover, eles continuarão funcionando com o toque no celular. */
 }
