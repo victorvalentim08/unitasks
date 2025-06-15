@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meu Curso</title>
-  <link rel="stylesheet" href="meucurso.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="meucurso.css" />
 </head>
 <body>
-  <div class="fundo-escuro"></div>
+  <div class="background-overlay"></div>
+  
+  <aside class="sidebar">
+    <div class="menu-toggle">&#9776;</div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Biblioteca</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Painel do Aluno</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-  <div class="container">
-    <h1 class="titulo">Meu curso</h1>
+  <main class="conteudo-curso">
+    <h1>Meu curso</h1>
     <p class="subtitulo">Aqui você acompanha a evolução das suas cadeiras</p>
 
-    <div class="formulario">
+    <form class="formulario-cadeira">
       <input type="text" placeholder="Digite o nome da cadeira" />
       <input type="text" placeholder="Digite o semestre" />
       <input type="text" placeholder="Digite o curso" />
-      <button class="btn-salvar">salvar</button>
-    </div>
+      <button type="submit">salvar</button>
+    </form>
 
-    <div class="grade-cadeiras">
-      <div class="cadeira">Cadeira 01</div>
-      <div class="cadeira">Cadeira 02</div>
-      <div class="cadeira">Cadeira 03</div>
-      <div class="cadeira">Cadeira 04</div>
-      <div class="cadeira">Cadeira 05</div>
-      <div class="cadeira">Cadeira 06</div>
+    <div class="grade-disciplinas">
+      <div class="disciplina">Cadeira 01</div>
+      <div class="disciplina">Cadeira 02</div>
+      <div class="disciplina">Cadeira 03</div>
+      <div class="disciplina">Cadeira 04</div>
+      <div class="disciplina">Cadeira 05</div>
+      <div class="disciplina">Cadeira 06</div>
     </div>
-  </div>
+  </main>
+
+  <img class="logo" src="../Banco de imagens/logo.png" alt="Logo UNTASKS" />
 </body>
 </html>

@@ -1,103 +1,117 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  color: white;
-  height: 100vh;
   background: url('../Banco de imagens/Painel Aluno/categorias/background meucurso.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
+  color: white;
 }
 
-/* Escurecimento do fundo */
-.fundo-escuro {
+.background-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Aqui escurece o fundo */
+  background: rgba(0, 0, 0, 0);
   z-index: 0;
 }
 
-.container {
-  position: relative;
+.sidebar {
+  width: 200px;
+  position: fixed;
+  top: 50px;
+  left: 30px;
   z-index: 1;
-  padding: 40px;
 }
 
-.titulo {
-  font-size: 3rem;
-  color: #ec7724;
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #ec3b61;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  font-size: 30px;
+  color: #ec3b61;
+  cursor: pointer;
+}
+
+.conteudo-curso {
+  margin-left: 250px;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.conteudo-curso h1 {
+  font-size: 48px;
+  color: #f17c22;
   margin-bottom: 10px;
 }
 
 .subtitulo {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-bottom: 30px;
-  color: #fff;
 }
 
-.formulario {
+.formulario-cadeira {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 600px;
 }
 
-.formulario input {
-  padding: 15px;
+.formulario-cadeira input {
+  padding: 12px;
   border: none;
   border-radius: 25px;
-  font-size: 1rem;
-  color: #c08497;
-  background-color: white;
+  font-size: 16px;
+  outline: none;
+  color: #ec3b61;
 }
 
-.btn-salvar {
-  align-self: flex-start;
-  background-color: #c1121f;
-  color: white;
+.formulario-cadeira button {
+  width: 100px;
+  padding: 10px;
   border: none;
-  padding: 10px 25px;
-  border-radius: 10px;
+  border-radius: 12px;
+  background: #ec3b61;
+  color: white;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 18px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  align-self: flex-start;
 }
 
-.btn-salvar:hover {
-  background-color: #a30e1a;
-}
-
-/* Cadeiras */
-.grade-cadeiras {
+.grade-disciplinas {
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 50px;
 }
 
-.cadeira {
-  background-color: #f2f2f2;
-  color: #e65c00;
+.disciplina {
+  background-color: #f3f3f3;
+  color: #f17c22;
   font-weight: bold;
-  font-size: 1.2rem;
-  border-radius: 30px;
-  padding: 25px 30px;
-  min-width: 180px;
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.cadeira:hover {
-  transform: scale(1.08);
-  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 30px;
+  min-width: 180px;
 }
