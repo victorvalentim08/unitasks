@@ -397,18 +397,15 @@ footer {
   }
 }
 
-/* ===== SEÇÃO DE RESPONSIVIDADE (COM EFEITO DE TOQUE/HOVER) ===== */
-
 @media (max-width: 900px) {
   .sidebar {
     display: none;
   }
 
   .container-pagina {
-    margin-left: 0; /* Centraliza a página */
+    margin-left: 0;
   }
 
-  /* Mantém as regras de layout para o corpo da página */
   body.pagina-sobre {
     padding: 0;
     overflow-y: auto;
@@ -431,10 +428,9 @@ footer {
     margin-top: 10px;
     margin-bottom: 25px;
   }
-  
-  /* Ajusta o conteúdo para empilhar e ter um tamanho razoável */
+
   .conteudo-alinhado {
-      max-width: 450px; /* Limita a largura máxima no mobile */
+      max-width: 450px;
   }
 
   .container-cards-membros {
@@ -442,7 +438,7 @@ footer {
     align-items: center;
     gap: 25px;
   }
-  
+
   .card-membro {
       width: 95%;
   }
@@ -453,7 +449,5 @@ footer {
     padding: 20px 0;
     color: rgba(255, 255, 255, 0.8);
   }
-  
-  /* Nenhuma outra regra é necessária. Ao não sobrescrever os
-     estilos de hover, eles continuarão funcionando com o toque no celular. */
+
 }
