@@ -79,4 +79,14 @@ body {
   padding: 20px;
   border-radius: 30px;
   min-width: 180px;
+  transition: box-shadow 0.25s, transform 0.25s, background 0.25s, color 0.25s;
+  box-shadow: 0 2px 8px #0001;
+  cursor: pointer;
+}
+
+.disciplina:hover {
+  background-color: #ff8c3c;
+  color: #fff;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 24px #ffb06688, 0 2px 8px #0002;
 }
