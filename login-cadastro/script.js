@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 })
-/document.addEventListener('DOMContentLoaded', function () {
+// Função validação de e-mail
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('loginForm');
     const erroMsg = document.getElementById('erro');
     const emailInput = document.getElementById('email');
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Aguarda 1 segundo antes de redirecionar
             setTimeout(() => {
                 if (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") {
-                    window.location.href = "../index.html"; // Live Server
+                    window.location.href = "../menualuno/menu.html"; // Live Server
                 } else {
                     window.location.href = "/unitasks/"; // GitHub Pages
                 }
