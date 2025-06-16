@@ -8,7 +8,7 @@ $polo = $_POST['polo'];
 $email = $_POST['email'];
 $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 $aceite = isset($_POST['aceite']) ? true : false;
-$data = date(format: 'Y-m-d H:i:s');
+$data = date( 'Y-m-d H:i:s');
 
 $verifica = $conexao->prepare('SELECT 1 FROM usuarios WHERE matricula = :matricula OR email = :email');
 $verifica->execute([
@@ -17,13 +17,13 @@ $verifica->execute([
 ]);
 
 if ($verifica->rowCount() > 0) {
-    echo "⚠️ Matrícula ou e-mail já cadastrados. <a href='cadastro.html'>Tentar novamente</a>";
+    echo "<p style='color:red;'>⚠️ Matrícula ou e-mail já cadastrados. <a href='../login-cadastro/cadastro.html'>Tentar novamente</a></p>";
     exit;
 }
 
 
 $sql = "INSERT INTO usuarios (matricula, nome, curso, polo, email, senha, aceite, data_cadastro)
-        VALUES (:matricula, :nome, :curso, :polo, : email, :senha, :aceite, :data)";
+        VALUES (:matricula, :nome, :curso, :polo, :email, :senha, :aceite, :data)";
 
 try{
     $stmt = $conexao->prepare($sql);
@@ -38,11 +38,12 @@ try{
             'data'=>$data
         ]);
     
-    header('Location: sucesso.html');
+    header('Location: ..login-cadastro/login.html');
     exit;
 
 }
 catch(PDOException $e) {
-    echo 'Erro a cadastrar'. $e->getMessage();
+    echo 'Erro ao cadastrar: ' . $e->getMessage();
+
 }
 ?>
