@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") {
                     window.location.href = "../menualuno/menu.html"; // Live Server
                 } else {
-                    window.location.href = "/unitasks/"; // GitHub Pages
+                    window.location.href = "../menualuno/menu.html"; // GitHub Pages
                 }
             }, 1000);
         } else {
