@@ -69,4 +69,4 @@ Este projeto está licenciado sob a **MIT License**.
 
 ---
 
-**Feito com dedicação por universitários apaixonados por código! ❤️**
+**Feito com dedicação por universitários apaixonados por código!**
