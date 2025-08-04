@@ -46,7 +46,7 @@ O Unitasks é um sistema web simples e intuitivo para gerenciamento de tarefas v
 | **Yuri**    | Desenvolvedor Front-End |
 | **Misael**  | Desenvolvedor Front-End |
 | **Nicolas** | Desenvolvedor Front-End |
-| **Victor**  | Designer / Front-End    |
+| **Victor**  | Designer / FullStack    |
 
 ---
 
